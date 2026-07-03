@@ -22,7 +22,6 @@ jobs:
           path: dist
             # dist
             # package.json
-
   build:
     needs: test
     runs-on: ubuntu-latest
@@ -41,7 +40,6 @@ jobs:
         uses: actions/download-artifact@v7
         with: 
           name: dist-files
-          path: dist
       - name: Output contents
         run: ls
       - name: Deploy
